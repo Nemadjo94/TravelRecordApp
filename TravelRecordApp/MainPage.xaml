@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TravelRecordApp"
+             x:Class="TravelRecordApp.MainPage">
+
+    <!--Stacks the elements one after the other-->
+    <StackLayout VerticalOptions="Center" Margin="20, 0, 20, 0"><!--left, top, right, bottom-->
+        <!-- Place new controls here -->
+        <Entry x:Name="emailEntry" 
+               Placeholder="Email:"
+               TextColor="{StaticResource blueColor}"
+               Keyboard="Email"/>
+        
+        <Entry x:Name="passwordEntry" 
+               Placeholder="Password:"
+               TextColor="{StaticResource blueColor}"
+               IsPassword="True"/>
+
+        <Button x:Name="LoginButton" 
+                Margin="0, 50, 0, 0"
+                Text="Login" 
+                Clicked="LoginButton_Clicked"
+                
+                BackgroundColor="{StaticResource blueColor}"
+                TextColor="{StaticResource whiteColor}"
+                
+                Style="{StaticResource normalButton}"
+        />
+        <!-- ^^^ Background color and Text color are overriding the automatically set values in app.xaml-->
+    </StackLayout>
+
+</ContentPage>
